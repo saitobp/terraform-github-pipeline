@@ -13,7 +13,7 @@ terraform {
   Necessario configurar de acordo com as credenciais da AWS
 */
 provider "aws" {
-  profile = "terraform_profile"
+  profile = "terraform"
   region = "us-east-1"
 }
 
