@@ -5,3 +5,4 @@
 *.tfvars.json
 .terraformrc
 terraform.rc
+terraform.tfstate
