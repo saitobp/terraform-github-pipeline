@@ -1,3 +1,19 @@
+module "vpc" {
+  /** Caminho para o módulo */
+  source = "../vpc-module"
+
+  /** Quantidade de instancias da vpc */
+  count = var.app_instances_count
+
+  /**
+  * Nome da vpc concatenado com o nome da aplicação e
+  * o index da quantidade de instancias
+  */
+  vpc_tags = {
+    "Name" = "vpc-${var.app_name}-${count.index}"
+  }
+}
+
 module "frontend" {
   /** Caminho para o módulo */
   source = "../ec2-module"
